@@ -11,7 +11,7 @@ function Homepage() {
         <nav>
           <a href="#">HOME</a>
           <a href="#">COURSES</a>
-          <a href="/journey">CAREER</a>
+          <a href="#">CAREER</a>
           <a href="#">INTERNSHIP</a>
           <a href="#">ABOUT</a>
         </nav>

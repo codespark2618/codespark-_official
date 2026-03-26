@@ -1,6 +1,7 @@
 import React from "react";
-import "./homepage.css";
-import heroImg from "./assets/heroimg.png";
+import "./Homepage.css";
+import heroImg from "../assets/heroimg.png";
+
 
 function Homepage() {
   return (

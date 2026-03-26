@@ -1,7 +1,7 @@
 import React from "react";
-import "./Journey.css";
+import "./Career.css";   // (optional: later rename pannalam)
 
-function Journey() {
+function Career() {   // 👈 CHANGE HERE
   return (
     <div className="journey">
       <div className="header">
@@ -83,4 +83,4 @@ function Journey() {
   );
 }
 
-export default Journey;
+export default Career;   // 👈 CHANGE HERE

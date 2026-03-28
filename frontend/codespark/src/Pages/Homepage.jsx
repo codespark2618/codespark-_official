@@ -7,7 +7,7 @@ function Homepage() {
 
   return (
     <div className="homepage">
-      
+
       <header className="navbar">
         <div className="logo">CodeSpark</div>
 
@@ -16,11 +16,12 @@ function Homepage() {
           <Link to="/Courses">COURSES</Link>   {/* 👈 CHANGE */}
           <Link to="/Career">CAREER</Link>     {/* 👈 CHANGE */}
           <Link to="/internship">INTERNSHIP</Link>
-          <Link to="/Studentjourney">JOURNEY</Link>
+
           <Link to="/about">ABOUT</Link>
         </nav>
-
-        <button className="enroll-btn">ENROLL NOW</button>
+        <Link to="/coursedetails">
+          <button className="enroll-btn">ENROLL NOW</button>
+        </Link>
       </header>
 
       <section className="hero">

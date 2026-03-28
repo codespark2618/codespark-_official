@@ -16,6 +16,7 @@ function Homepage() {
           <Link to="/Courses">COURSES</Link>   {/* 👈 CHANGE */}
           <Link to="/Career">CAREER</Link>     {/* 👈 CHANGE */}
           <Link to="/internship">INTERNSHIP</Link>
+          <Link to="/Studentjourney">JOURNEY</Link>
           <Link to="/about">ABOUT</Link>
         </nav>
 

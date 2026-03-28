@@ -4,6 +4,7 @@ import Homepage from "./Pages/Homepage";
 import Career from "./Pages/Career";
 import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetails";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/coursedetails" element={<CourseDetails />} />
+        <Route path="/footer" element={<Footer/>} />
 
       </Routes>
     </BrowserRouter>

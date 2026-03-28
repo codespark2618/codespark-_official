@@ -4,7 +4,7 @@ import Homepage from "./Pages/Homepage";
 import Career from "./Pages/Career";
 import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetails";
-import Footer from "./pages/Footer";
+import Footer from "./Components/Footer"; 
 
 function App() {
   return (

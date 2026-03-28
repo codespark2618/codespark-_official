@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 2%;
+  background: #f2f1f1;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Nav Links */
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #f28f04;
+}
+
+/* Enroll Button */
+.enroll-btn {
+  padding: 8px 18px;
+  background-color: #f28f04; /* Orange */
+  color: white;              /* White text */
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #f28f04;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.enroll-btn:hover {
+  background-color: white;   /* White background */
+  color: #f28f04;            /* Orange text */
+  border: 2px solid #f28f04;
+}
+
+
+
+.logo img {
+  height: 100px;   /* adjust size */
+  width: auto;
+}

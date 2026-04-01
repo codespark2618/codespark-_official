@@ -16,7 +16,7 @@ const courses = [
     level: "Beginner",
     title: "Web Development",
     description:
-      "Master HTML, CSS, JavaScript & modern frameworks to build stunning, responsive websites from scratch.",
+      "Master HTML, CSS, JavaScript & modern frameworks to build stunning websites.",
     duration: "4 months",
     icon: <FaGlobe />,
     theme: "blue",
@@ -25,7 +25,7 @@ const courses = [
     level: "Intermediate",
     title: "Python Full Stack",
     description:
-      "Learn Python fundamentals to advanced concepts including automation, scripting and backend development.",
+      "Learn Python from basics to backend development and automation.",
     duration: "3 months",
     icon: <FaCode />,
     theme: "green",
@@ -34,7 +34,7 @@ const courses = [
     level: "Intermediate",
     title: "Java Full Stack",
     description:
-      "Comprehensive Java development covering Spring Boot, Hibernate, REST APIs and microservices architecture.",
+      "Master Java, Spring Boot, REST APIs and microservices.",
     duration: "3 months",
     icon: <FaJava />,
     theme: "orange",
@@ -43,7 +43,7 @@ const courses = [
     level: "Intermediate",
     title: "Python, SQL, Django",
     description:
-      "Master HTML, CSS, JavaScript & modern frameworks to build stunning, responsive websites from scratch.",
+      "Build powerful web apps using Django and database integration.",
     duration: "4 months",
     icon: <FaDatabase />,
     theme: "purple",
@@ -52,16 +52,16 @@ const courses = [
     level: "Intermediate",
     title: "Java Springboot SQL",
     description:
-      "Learn Python fundamentals to advanced concepts including automation, scripting and backend development.",
+      "Develop scalable backend systems using Spring Boot.",
     duration: "3 months",
     icon: <FaChartPie />,
     theme: "pink",
   },
   {
     level: "Beginner",
-    title: "Data Science And Analysis",
+    title: "Data Science & Analysis",
     description:
-      "Analyze and visualize data using Python, SQL, Power BI and Excel to derive actionable business insights.",
+      "Analyze data using Python, SQL, Power BI and Excel.",
     duration: "3 months",
     icon: <FaChartBar />,
     theme: "mint",
@@ -71,25 +71,28 @@ const courses = [
 function Courses() {
   return (
     <div className="courses-page">
+      {/* HERO */}
       <section className="courses-hero">
         <div className="courses-badge">OUR CURRICULUM</div>
         <h1 className="courses-title">
           Courses Designed for the <span>Real World</span>
         </h1>
         <p className="courses-subtitle">
-          Industry-aligned Curriculum taught by experienced professionals
-          <br />
-          with hands-on project experience.
+          Industry-aligned curriculum with real-time projects.
         </p>
       </section>
 
+      {/* GRID */}
       <section className="courses-grid-section">
         <div className="courses-grid">
           {courses.map((course, index) => (
             <div className={`course-card ${course.theme}`} key={index}>
               <div className="course-icon-box">{course.icon}</div>
+
               <div className="course-level">{course.level}</div>
+
               <h3 className="course-name">{course.title}</h3>
+
               <p className="course-desc">{course.description}</p>
 
               <div className="course-footer">
@@ -98,8 +101,8 @@ function Courses() {
                   <span>{course.duration}</span>
                 </div>
 
-                <a href="#" className="learn-more" onClick={(e) => e.preventDefault()}>
-                  Learn More <FaArrowRight />
+                <a href="#" onClick={(e) => e.preventDefault()} className="learn-more">
+                  Learn <FaArrowRight />
                 </a>
               </div>
             </div>

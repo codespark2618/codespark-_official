@@ -12,10 +12,11 @@ function Navbar() {
 
       <nav>
         <Link to="/">HOME</Link>
+        <Link to="/about">ABOUT</Link>
         <Link to="/courses">COURSES</Link>
         <Link to="/career">CAREER</Link>
         <Link to="/internship">INTERNSHIP</Link>
-        <Link to="/about">ABOUT</Link>
+        <Link to="/contact">CONTACT</Link>
       </nav>
 
       <Link to="/coursedetails">

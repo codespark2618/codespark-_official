@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Homepage.css";
-import heroImg from "../assets/heroimg.png";
+import heroImg from "../assets/heroimg1.png";
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+
 function Homepage() {
   return (
     <>
@@ -22,14 +22,10 @@ function Homepage() {
             </p>
 
             <div className="buttons">
-              <button className="primary-btn">
-                Start Learning →
-              </button>
+              <button className="primary-btn">Start Learning →</button>
 
               <Link to="/courses">
-                <button className="secondary-btn">
-                  Explore Courses
-                </button>
+                <button className="secondary-btn">Explore Courses</button>
               </Link>
             </div>
           </div>
@@ -39,8 +35,6 @@ function Homepage() {
           </div>
         </section>
       </div>
-
-      <Footer />
     </>
   );
 }

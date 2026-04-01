@@ -5,6 +5,8 @@ import Career from "./Pages/Career";
 import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetails";
 import Footer from "./Components/Footer"; 
+import Contact from "./Components/Contact";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/coursedetails" element={<CourseDetails />} />
         <Route path="/footer" element={<Footer/>} />
+        <Route path="/contact" element={<Contact/>} />
 
       </Routes>
     </BrowserRouter>

@@ -13,7 +13,7 @@ const Footer = () => {
           <h2 className="logo">
   <img src={codespark} alt="CodeSpark Logo" className="logo-img" />
 </h2>
-          <p className="content">
+          <p className="contents">
             Empowering the next generation of tech professionals through quality
             training, real projects, and industry connections.
           </p>
@@ -57,7 +57,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>📍 Chennai</p>
-          <p>📧 vigneshwaran2618@gmail.com</p>
+          <p>📧 codespark2618@gmail.com</p>
           <p>📞 +91 90253 53470</p>
         </div>
       </div>

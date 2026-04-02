@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Homepage.css";
 import heroImg from "../assets/heroimg1.png";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import SuccessStories from "../Components/SuccessStories";
 
 function Homepage() {
   return (
@@ -34,6 +36,8 @@ function Homepage() {
             <img src={heroImg} alt="hero" />
           </div>
         </section>
+        <SuccessStories />
+        <Footer/>
       </div>
     </>
   );

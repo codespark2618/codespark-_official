@@ -4,20 +4,20 @@
   box-sizing: border-box;
 }
 
-body {
+/* ✅ முக்கிய fix */
+html, body {
+  height: auto;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   background: #f5f5f5;
-  overflow: hidden; /* no scroll */
 }
 
+/* PAGE */
 .homepage {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
 }
 
-/* NAVBAR FIXED */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -30,21 +30,20 @@ body {
 /* HERO */
 .hero {
   width: 100%;
-  height: calc(100vh - 80px);
+  min-height: 100vh;
+  padding: 100px 60px 40px; /* navbar space */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 60px;
-  margin-top: 80px;
 }
 
+/* LEFT */
 .hero-left {
   width: 50%;
 }
 
 .hero-left h1 {
   font-size: 48px;
-  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -86,24 +85,26 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
-
 }
 
 .hero-right img {
   width: 100%;
-  max-width: 6000px;
+  max-width: 500px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  body {
-    overflow: auto;
-  }
+/* ✅ DEMO content (remove later if needed) */
+.success-section {
+  height: 800px;
+  background: #fff;
+  padding: 40px;
+}
 
+/* MOBILE */
+@media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    height: auto;
+    padding: 100px 20px 40px;
   }
 
   .hero-left,
@@ -113,5 +114,10 @@ body {
 
   .hero-left h1 {
     font-size: 32px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

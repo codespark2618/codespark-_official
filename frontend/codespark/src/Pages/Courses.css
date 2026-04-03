@@ -2,19 +2,11 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+.courses-page {
+  width: 100%;
+  padding: 60px 20px;
   font-family: "Poppins", sans-serif;
   background: #f6f6f6;
-  overflow: hidden; /* 🚀 no scroll */
-}
-
-/* PAGE */
-.courses-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
 }
 
 /* HERO */
@@ -51,9 +43,7 @@ body {
 
 /* GRID */
 .courses-grid-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
+  width: 100%;
 }
 
 .courses-grid {
@@ -151,10 +141,6 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  body {
-    overflow: auto; /* allow scroll */
-  }
-
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
   }

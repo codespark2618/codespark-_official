@@ -5,6 +5,9 @@ import heroImg from "../assets/heroimg1.png";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import SuccessStories from "../Components/SuccessStories";
+import CoursesSection from "../Components/CoursesSection";
+import WhyChooseUs from "../Components/WhyChooseUs";
+import Contact from "../Components/Contact";
 
 function Homepage() {
   return (
@@ -36,7 +39,10 @@ function Homepage() {
             <img src={heroImg} alt="hero" />
           </div>
         </section>
+        <WhyChooseUs />
+        <CoursesSection />
         <SuccessStories />
+        <Contact />
         <Footer/>
       </div>
     </>

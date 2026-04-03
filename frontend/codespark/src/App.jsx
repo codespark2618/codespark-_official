@@ -6,6 +6,7 @@ import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetails";
 import Footer from "./Components/Footer"; 
 import Contact from "./Components/Contact";
+import Internship from "./Pages/Internship";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/coursedetails" element={<CourseDetails />} />
         <Route path="/footer" element={<Footer/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/internship" element={<Internship />} />
 
       </Routes>
     </BrowserRouter>

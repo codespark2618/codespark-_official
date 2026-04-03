@@ -10,6 +10,7 @@ const data = [
     name: "MICHEAL",
     role: "Python Full Stack Developer",
   },
+ 
   {
     course: "Frontend Development",
     text: "The frontend course at CodeSpark gave me real project experience and helped me land my dream job within 3 months.",
@@ -33,6 +34,12 @@ const data = [
     text: "The Data Science course at CodeSpark gave me real project experience and helped me land my dream job within 3 months.",
     name: "VASANTH",
     role: "Data Scientist",
+  },
+   {
+    course: "Full Stack developer",
+    text: "The Full Stack developer course at CodeSpark gave me real project experience and helped me land my dream job within 3 months.",
+    name: "DEEPIKA",
+    role: "Full Stack Developer",
   },
 ];
 

@@ -11,7 +11,7 @@
   align-items: center;
   padding: 60px 80px;
   background: #f8f8f8;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 /* LEFT */
@@ -47,6 +47,7 @@
 
 .contact-info {
   margin-top: 40px;
+  
 }
 
 .info-item {
@@ -162,4 +163,136 @@ textarea {
   border: 1px solid #ddd;
   background: #f9f9f9;
   outline: none;
+}
+
+/* 📱 Extra Small Devices (Mobile <576px) */
+@media (max-width: 575px) {
+
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-left h1 {
+    font-size: 26px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    margin-top: 25px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .contact-form {
+    padding: 25px;
+    margin-top: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+
+/* 📱 Small Devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-left h1 {
+    font-size: 30px;
+  }
+
+  .contact-form {
+    margin-top: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+
+/* 📱 Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .contact-container {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-left h1 {
+    font-size: 34px;
+  }
+
+  .contact-form {
+    margin-top: 30px;
+  }
+}
+
+
+/* 💻 Small Laptop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .contact-container {
+    padding: 50px 60px;
+  }
+
+  .contact-left h1 {
+    font-size: 36px;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 48%;
+  }
+}
+
+
+/* 🖥️ Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .contact-container {
+    padding: 60px 80px;
+  }
+}
+
+
+/* 🖥️ Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+
+  .contact-container {
+    padding: 80px 120px;
+  }
+
+  .contact-left h1 {
+    font-size: 48px;
+  }
 }

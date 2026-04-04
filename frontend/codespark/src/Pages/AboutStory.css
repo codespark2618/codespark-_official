@@ -1,0 +1,143 @@
+.about-story-section {
+  width: 100%;
+  background: #f3f3f3;
+  padding: 40px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-story-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 0 40px;
+}
+
+/* LEFT IMAGE */
+.about-story-left {
+  flex: 1;
+}
+
+.about-story-image {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* RIGHT CONTENT */
+.about-story-right {
+  flex: 1;
+}
+
+/* BADGE */
+.story-badge {
+  display: inline-block;
+  border: 2px solid #f28c1b;
+  padding: 8px 22px;
+  border-radius: 30px;
+  color: #f28c1b;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.story-title {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.story-title span {
+  color: #f28c1b;
+  font-style: italic;
+}
+
+/* DESCRIPTION */
+.story-description {
+  font-size: 19px;
+  color: #6f7780;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 90%;
+}
+
+/* LINE */
+.story-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0 28px;
+}
+
+/* BLOCK */
+.story-item {
+  margin-bottom: 30px;
+}
+
+/* ICON + HEADING ROW */
+.story-item-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* ICON BOX */
+.story-icon-box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #f28c1b;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON */
+.story-icon {
+  font-size: 28px;
+  color: #f28c1b;
+}
+
+/* HEADING */
+.story-item h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* PARAGRAPH */
+.story-item p {
+  font-size: 17px;
+  color: #6f7780;
+  line-height: 1.6;
+  margin-left: 75px;
+  max-width: 95%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-story-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .story-title {
+    font-size: 34px;
+  }
+
+  .story-description {
+    font-size: 16px;
+  }
+
+  .story-item h2 {
+    font-size: 22px;
+  }
+
+  .story-item p {
+    font-size: 15px;
+    margin-left: 65px;
+  }
+}

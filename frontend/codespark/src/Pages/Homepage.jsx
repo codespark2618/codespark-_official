@@ -9,6 +9,7 @@ import CoursesSection from "../Components/CoursesSection";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Contact from "../Components/Contact";
 
+
 function Homepage() {
   return (
     <>

@@ -1,140 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
-/* MAIN */
-.career-section {
+.courses-page {
   width: 100%;
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  background: #f6f6f6;
+  background: #f7f7f7;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* HEADER */
-.career-header {
+.courses-grid-section {
+  width: 100%;
+  padding: 14px 26px 30px;
+}
+
+/* TOP HEADER */
+.courses-header {
+  max-width: 1100px;
+  margin: 0 auto 42px;
   text-align: center;
+}
+
+.courses-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+  border-radius: 999px;
+  background: #f6e8bf;
+  color: #df8f1b;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
   margin-bottom: 20px;
 }
 
-.career-badge {
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: #f5e8ba;
-  color: #df8b14;
-  font-size: 12px;
-  margin-bottom: 10px;
-  display: inline-block;
-}
-
-.career-title {
-  font-size: 34px;
+.courses-heading {
   margin: 0;
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #111111;
 }
 
-.career-title span {
-  color: #f28b08;
+.courses-heading span {
+  color: #f18510;
 }
 
-.career-subtitle {
-  font-size: 14px;
-  color: #777;
-  margin-top: 8px;
+.courses-subheading {
+  margin: 22px 0 0;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #7f7f7f;
+  font-weight: 500;
 }
 
-/* JOURNEY */
-.career-journey {
-  position: relative;
-  width: 100%;
-}
-
-/* LINE */
-.career-line {
-  position: absolute;
-  top: 35px;
-  left: 5%;
-  width: 90%;
-  height: 2px;
-  display: flex;
-  z-index: 0;
-}
-
-.line-part {
-  flex: 1;
-  height: 2px;
-}
-
-.line-blue { background: #7aa4e5; }
-.line-orange { background: #ee950f; }
-.line-green { background: #2bbc7f; }
-.line-purple { background: #8c62e8; }
-
-/* STEPS */
-.career-steps {
-  position: relative;
-  z-index: 1;
+/* GRID */
+.courses-grid {
+  max-width: 1320px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px 28px;
 }
 
-/* CARD */
-.career-step {
-  text-align: center;
+.course-card {
+  background: #ffffff;
+  border: 2px solid #d3d3d3;
+  border-radius: 22px;
+  padding: 24px 24px 18px;
+  min-height: 340px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-/* ICON */
-.career-icon-box {
-  width: 70px;
-  height: 70px;
-  border-radius: 16px;
+.course-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 10px;
+  font-size: 28px;
+  margin-bottom: 22px;
+  flex-shrink: 0;
 }
 
-/* COLORS */
-.blue { background: #dfeaf8; color: #7aa4e5; }
-.orange { background: #f5edd0; color: #ee950f; }
-.green { background: #d6f4e4; color: #2bbc7f; }
-.purple { background: #e5dcf6; color: #8c62e8; }
-
-/* BADGE */
-.career-step-badge {
-  display: inline-block;
-  padding: 4px 10px;
+.course-level {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 7px 13px;
   border-radius: 999px;
-  font-size: 11px;
-  margin-bottom: 6px;
-}
-
-/* TEXT */
-.career-step h3 {
-  font-size: 16px;
-  margin: 6px 0;
-}
-
-.career-step p {
   font-size: 12px;
-  color: #555;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.course-name {
+  margin: 0 0 16px;
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: #111111;
+}
+
+.course-desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: #8a8a8a;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.course-footer {
+  margin-top: auto;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.course-duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777777;
+  font-size: 16px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.course-duration svg {
+  font-size: 18px;
+  color: #9a9a9a;
+  flex-shrink: 0;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.learn-more svg {
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+/* THEME COLORS */
+.blue .course-icon-box {
+  background: #dce8fb;
+  color: #79a3ec;
+}
+.blue-badge {
+  background: #dce8fb;
+  color: #79a3ec;
+}
+.blue-text {
+  color: #4f91f1;
+}
+
+.green .course-icon-box {
+  background: #d8f5e8;
+  color: #2bc784;
+}
+.green-badge {
+  background: #d8f5e8;
+  color: #2bc784;
+}
+.green-text {
+  color: #31c885;
+}
+
+.orange .course-icon-box {
+  background: #f9edd2;
+  color: #ee9718;
+}
+.orange-badge {
+  background: #f9edd2;
+  color: #ee9718;
+}
+.orange-text {
+  color: #ef9218;
+}
+
+.purple .course-icon-box {
+  background: #eadfff;
+  color: #9b6df3;
+}
+.purple-badge {
+  background: #eadfff;
+  color: #9b6df3;
+}
+.purple-text {
+  color: #9164ef;
+}
+
+.pink .course-icon-box {
+  background: #f9deee;
+  color: #ec9cc8;
+}
+.pink-badge {
+  background: #f9deee;
+  color: #ec9cc8;
+}
+.pink-text {
+  color: #ea95c2;
+}
+
+.mint .course-icon-box {
+  background: #d8f5e8;
+  color: #29c986;
+}
+.mint-badge {
+  background: #d8f5e8;
+  color: #29c986;
+}
+.mint-text {
+  color: #2fc989;
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .career-steps {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1200px) {
+  .courses-heading {
+    font-size: 42px;
   }
 
-  .career-line {
-    display: none;
+  .courses-subheading {
+    font-size: 17px;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 900px;
   }
 }
 
-@media (max-width: 600px) {
-  .career-steps {
+@media (max-width: 768px) {
+  .courses-grid-section {
+    padding: 16px;
+  }
+
+  .courses-header {
+    margin-bottom: 28px;
+  }
+
+  .courses-pill {
+    font-size: 14px;
+    padding: 9px 20px;
+    margin-bottom: 16px;
+  }
+
+  .courses-heading {
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+  }
+
+  .courses-subheading {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 14px;
+  }
+
+  .courses-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .course-card {
+    min-height: auto;
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .course-icon-box {
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .course-level {
+    font-size: 10px;
+    padding: 5px 10px;
+    margin-bottom: 14px;
+  }
+
+  .course-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .course-desc {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .course-footer {
+    padding-top: 20px;
+  }
+
+  .course-duration,
+  .learn-more {
+    font-size: 15px;
   }
 }

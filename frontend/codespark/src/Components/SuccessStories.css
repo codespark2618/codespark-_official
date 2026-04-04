@@ -1,194 +1,257 @@
-    .success-section {
-          text-align: center;
-          padding: 60px 20px;
-          background: #f5f5f5;
-          font-family: "Poppins", sans-serif;
-      }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
-      .tag {
-          display: inline-block;
-          background: #ffe7c2;
-          color: #ff8800;
-          padding: 6px 16px;
-          border-radius: 20px;
-          font-size: 14px;
-          margin-bottom: 10px;
-      }
+* {
+  box-sizing: border-box;
+}
 
-      h1 {
-          font-size: 36px;
-          margin: 10px 0;
-      }
+.success-section {
+  width: 100%;
+  padding: 70px 0 0;
+  background: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
 
-      h1 span {
-          color: #ff8800;
-      }
+.tag {
+  width: fit-content;
+  margin: 0 auto 18px;
+  padding: 10px 22px;
+  background: #fff4d8;
+  color: #f0a126;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
 
-      .subtext {
-          color: gray;
-          margin-bottom: 40px;
-      }
+.success-section h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.2;
+}
 
-      .card-container {
-          display: flex;
-          gap: 45px;
-          justify-content: center;
-          flex-wrap: wrap;
-      }
+.success-section h1 span {
+  color: #f28c13;
+}
 
-      .card {
-          background: #fff;
-          padding: 25px;
+.subtext {
+  margin: 16px 0 34px;
+  text-align: center;
+  font-size: 18px;
+  color: #7b7b7b;
+  font-weight: 500;
+  line-height: 1.7;
+  padding: 0 16px;
+}
 
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-          text-align: left;
-          transition: 0.2s;
+/* MARQUEE */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
-          display: flex;
+.card-track {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  width: max-content;
+  animation: scrollLeft 32s linear infinite;
+  padding: 0 24px 0 24px;
+}
 
-          flex-direction: column;
+.card-track:hover {
+  animation-play-state: paused;
+}
 
-          justify-content: space-between;
+.card {
+  width: 360px;
+  min-height: 320px;
+  background: #ffffff;
+  border: 1.5px solid #ececec;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-          height: auto;
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
 
-      }
+.quote {
+  font-size: 28px;
+  color: #f28c13;
+}
 
-      .course-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          background: transparent;
-          color: #ff8800;
-          padding: 8px 14px;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 13px;
-          font-weight: 700;
-          transition: 0.3s;
-      }
+.stars {
+  font-size: 18px;
+  color: #f4b400;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
 
-      .course-btn:hover {
-          background: #ff8800;
-          color: #fff;
-      }
+.content {
+  margin: 0 0 20px;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 500;
+}
 
+.course-btn {
+  width: fit-content;
+  border: none;
+  outline: none;
+  background: #fff4e8;
+  color: #f28c13;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  cursor: default;
+}
 
-      .card:hover {
-          transform: translateY(-5px);
-      }
+.book-icon {
+  font-size: 16px;
+  line-height: 1;
+}
 
-      .top {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      }
+.card hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #eeeeee;
+  margin: auto 0 18px;
+}
 
-      .quote {
-          font-size: 30px;
-          color: #ff8800;
-      }
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 
-      .stars {
-          color: #ff8800;
-          font-size: 18px;
-      }
+.icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff4e8;
+  color: #f28c13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
 
-      .content {
-          margin: 15px 0;
-          color: #444;
-          font-size: 15px;
-          line-height: 1.6;
-      }
+.profile h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111111;
+}
 
-      .book-icon {
-          color: #ff8800;
-          font-size: 18px;
-          margin-right: 6px;
-      }
+.profile p {
+  margin: 0;
+  font-size: 14px;
+  color: #7a7a7a;
+  font-weight: 500;
+  line-height: 1.5;
+}
 
-      .profile {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 15px;
-      }
-
-      .icon-wrapper {
-          width: 40px;
-          height: 40px;
-          border: 2px solid #ff8800;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #ff8800;
-      }
-
-      .profile h4 {
-          margin: 0;
-          font-size: 16px;
-      }
-
-      .profile p {
-          margin: 0;
-          font-size: 13px;
-          color: gray;
-      }
-      @media (max-width: 576px) {
-
-    .success-section {
-      padding: 40px 15px;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-
-    .subtext {
-      font-size: 14px;
-    }
-
-    .card-container {
-      display: grid;
-      grid-template-columns: 1fr;  /* 👈 single column */
-      gap: 20px;
-    }
-
-    .card {
-      padding: 20px;
-    }
-
-    .content {
-      font-size: 14px;
-    }
-
-    .course-btn {
-      font-size: 12px;
-      gap: 6px;
-    }
-
-    .icon-wrapper {
-      width: 35px;
-      height: 35px;
-    }
-
-    .profile h4 {
-      font-size: 14px;
-    }
-
-    .profile p {
-      font-size: 12px;
-    }
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
   }
-  @media (max-width: 768px) {
-
-    .card {
-      min-width: 280px;
-    }
-
-    .card-container::-webkit-scrollbar {
-      display: none;
-    }
+  100% {
+    transform: translateX(calc(-50% - 12px));
   }
- 
+}
+
+@media (max-width: 768px) {
+  .success-section {
+    padding: 50px 0 0;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-bottom: 14px;
+  }
+
+  .success-section h1 {
+    font-size: 30px;
+    padding: 0 14px;
+  }
+
+  .subtext {
+    font-size: 14px;
+    margin: 12px 0 24px;
+  }
+
+  .card-track {
+    gap: 16px;
+    padding: 0 16px;
+    animation: scrollLeftMobile 24s linear infinite;
+  }
+
+  .card {
+    width: 300px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .quote {
+    font-size: 24px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .course-btn {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+
+  .icon-wrapper {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+
+  .profile h4 {
+    font-size: 15px;
+  }
+
+  .profile p {
+    font-size: 13px;
+  }
+}
+
+@keyframes scrollLeftMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 8px));
+  }
+}

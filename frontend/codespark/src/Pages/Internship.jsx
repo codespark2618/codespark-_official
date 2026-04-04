@@ -1,6 +1,7 @@
 import React from "react";
 import "./Internship.css";
 import { FaArrowUp, FaStar, FaRegStar, FaRegClock } from "react-icons/fa";
+import Footer from "../Components/Footer"; // 👈 ADD THIS
 
 import pythonImg from "../assets/python.png";
 import webImg from "../assets/web.png";
@@ -48,77 +49,84 @@ function Internship() {
   ];
 
   return (
-    <section className="internship-page">
-      <div className="internship-container">
-        <h1 className="internship-title">
-          Start Your <span className="highlight">Internship</span> Journey
-          <br />
-          <span className="highlight second-line">Learn. Build. Grow.</span>
-        </h1>
+    <>
+      <section className="internship-page">
+        <div className="internship-container">
+          <h1 className="internship-title">
+            Start Your <span className="highlight">Internship</span> Journey
+            <br />
+            <span className="highlight second-line">Learn. Build. Grow.</span>
+          </h1>
 
-        <p className="internship-subtitle">
-          Kickstart your career with real-world internship opportunities and
-          hands-on project experience.
-        </p>
+          <p className="internship-subtitle">
+            Kickstart your career with real-world internship opportunities and
+            hands-on project experience.
+          </p>
 
-        <div className="internship-buttons">
-          <button className="internship-btn primary-btn" type="button">
-            Explore Roles
-            <span className="btn-icon white-icon">
-              <FaArrowUp />
-            </span>
-          </button>
+          <div className="internship-buttons">
+            <button className="internship-btn primary-btn" type="button">
+              Explore Roles
+              <span className="btn-icon white-icon">
+                <FaArrowUp />
+              </span>
+            </button>
 
-          <button className="internship-btn secondary-btn" type="button">
-            Apply Now
-            <span className="btn-icon orange-icon">
-              <FaArrowUp />
-            </span>
-          </button>
-        </div>
-      </div>
-
-      <div className="internship-cards-container">
-        {internshipRoles.map((role) => (
-          <div className="internship-card" key={role.id}>
-            <div className="internship-image-wrap">
-              <img
-                src={role.image}
-                alt={role.title}
-                className="internship-image"
-              />
-            </div>
-
-            <div className="internship-rating-price">
-              <div className="internship-rating">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
-              </div>
-
-              <div className="internship-price">{role.price}</div>
-            </div>
-
-            <h3 className="internship-card-title">{role.title}</h3>
-
-            <p className="internship-card-description">{role.description}</p>
-
-            <div className="internship-card-footer">
-              <div className="internship-duration">
-                <FaRegClock />
-                <span>{role.duration}</span>
-              </div>
-
-              <button className="internship-apply-link" type="button">
-                APPLY NOW →
-              </button>
-            </div>
+            <button className="internship-btn secondary-btn" type="button">
+              Apply Now
+              <span className="btn-icon orange-icon">
+                <FaArrowUp />
+              </span>
+            </button>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+
+        <div className="internship-cards-container">
+          {internshipRoles.map((role) => (
+            <div className="internship-card" key={role.id}>
+              <div className="internship-image-wrap">
+                <img
+                  src={role.image}
+                  alt={role.title}
+                  className="internship-image"
+                />
+              </div>
+
+              <div className="internship-rating-price">
+                <div className="internship-rating">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaRegStar />
+                </div>
+
+                <div className="internship-price">{role.price}</div>
+              </div>
+
+              <h3 className="internship-card-title">{role.title}</h3>
+
+              <p className="internship-card-description">
+                {role.description}
+              </p>
+
+              <div className="internship-card-footer">
+                <div className="internship-duration">
+                  <FaRegClock />
+                  <span>{role.duration}</span>
+                </div>
+
+                <button className="internship-apply-link" type="button">
+                  APPLY NOW →
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 👇 FOOTER */}
+      <Footer />
+    </>
   );
 }
 

@@ -10,7 +10,6 @@ const data = [
     name: "MICHEAL",
     role: "Python Full Stack Developer",
   },
- 
   {
     course: "Frontend Development",
     text: "The frontend course at CodeSpark gave me real project experience and helped me land my dream job within 3 months.",
@@ -35,7 +34,7 @@ const data = [
     name: "VASANTH",
     role: "Data Scientist",
   },
-   {
+  {
     course: "Full Stack developer",
     text: "The Full Stack developer course at CodeSpark gave me real project experience and helped me land my dream job within 3 months.",
     name: "DEEPIKA",
@@ -44,6 +43,8 @@ const data = [
 ];
 
 function SuccessStories() {
+  const movingCards = [...data, ...data];
+
   return (
     <div className="success-section">
       <p className="tag">STUDENT SUCCESS STORIES</p>
@@ -56,36 +57,37 @@ function SuccessStories() {
         Real stories from students who transformed their careers with CodeSpark.
       </p>
 
-      <div className="card-container">
-        {data.map((item, index) => (
-          <div className="card" key={index}>
-            <div className="top">
-              <FaQuoteLeft className="quote" />
-              <div className="stars">★★★★★</div>
-            </div>
-
-            <p className="content">"{item.text}"</p>
-
-            <button className="course-btn">
-              <span className="book-icon">📘</span>
-              {item.course}
-            </button>
-            <div className="line"></div>
-
-            <hr />
-
-            <div className="profile">
-              <div className="icon-wrapper">
-                <FiUser />
+      <div className="marquee">
+        <div className="card-track">
+          {movingCards.map((item, index) => (
+            <div className="card" key={index}>
+              <div className="top">
+                <FaQuoteLeft className="quote" />
+                <div className="stars">★★★★★</div>
               </div>
 
-              <div>
-                <h4>{item.name}</h4>
-                <p>{item.role}</p>
+              <p className="content">"{item.text}"</p>
+
+              <button className="course-btn">
+                <span className="book-icon">📘</span>
+                {item.course}
+              </button>
+
+              <hr />
+
+              <div className="profile">
+                <div className="icon-wrapper">
+                  <FiUser />
+                </div>
+
+                <div>
+                  <h4>{item.name}</h4>
+                  <p>{item.role}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

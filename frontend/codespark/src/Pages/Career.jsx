@@ -1,6 +1,6 @@
 import React from "react";
 import "./Career.css";
-import careerImg from "../assets/career-team.png";
+import careerImg from "../assets/careerlogo.png";
 
 function Career() {
   return (

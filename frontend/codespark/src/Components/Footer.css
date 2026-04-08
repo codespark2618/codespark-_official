@@ -1,6 +1,6 @@
 .footer {
-  background-color: #000;
-  color: #ccc;
+  background-color: #ffffff;
+  color: #000000;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
@@ -10,13 +10,14 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
 }
+
 .contents{
   position:relative;
   margin-bottom: 50px;
   
 }
 .footer-section h3 {
-  color: #fff;
+  color: #000000;
   margin-bottom: 15px;
 }
 

@@ -123,8 +123,6 @@ function Internship() {
           ))}
         </div>
       </section>
-
-      {/* 👇 FOOTER */}
       <Footer />
     </>
   );

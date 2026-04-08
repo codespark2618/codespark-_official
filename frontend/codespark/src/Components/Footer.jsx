@@ -35,7 +35,6 @@ const Footer = () => {
             <li>Courses</li>
             <li>Internship</li>
             <li>Our Journey</li>
-            <li>Testimonials</li>
             <li>Apply Now</li>
           </ul>
         </div>

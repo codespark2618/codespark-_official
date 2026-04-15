@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* ✅ முக்கிய fix */
 html, body {
   height: auto;
   overflow-x: hidden;
@@ -26,12 +25,17 @@ html, body {
   z-index: 1000;
   background: white;
 }
+.floating-badge {
+  text-decoration: none; /* remove underline */
+  color: #333;
+  display: inline-block;
+}
 
 /* HERO */
 .hero {
   width: 100%;
   min-height: 100vh;
-  padding: 100px 60px 40px; /* navbar space */
+  padding: 100px 60px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +47,7 @@ html, body {
 }
 
 .hero-left h1 {
-  font-size: 48px;
+  font-size: 78px;
   line-height: 1.2;
 }
 
@@ -53,7 +57,7 @@ html, body {
 
 .hero-left p {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 30px;
   color: #555;
 }
 
@@ -82,9 +86,11 @@ html, body {
 
 /* IMAGE */
 .hero-right {
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: center;
+  height: 600px;
+  position: relative; /* IMPORTANT */
 }
 
 .hero-right img {
@@ -92,14 +98,49 @@ html, body {
   max-width: 500px;
 }
 
-/* ✅ DEMO content (remove later if needed) */
+/* ✅ FLOATING BADGES */
+.floating-badge {
+  position: absolute;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* POSITIONS */
+.badge-top-left {
+  top: 30px;
+  left: -40px;
+}
+
+.badge-bottom-left {
+  bottom: 50px;
+  left: -40px;
+}
+
+.badge-top-right {
+  top: 40px;
+  right: -40px;
+}
+
+/* ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* SUCCESS SECTION */
 .success-section {
   height: 800px;
   background: #fff;
   padding: 40px;
 }
 
-/* MOBILE */
+/* 📱 MOBILE */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -119,5 +160,26 @@ html, body {
   .buttons {
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  /* MOBILE BADGES FIX */
+  .floating-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .badge-top-left {
+    left: 0;
+    top: -10px;
+  }
+
+  .badge-bottom-left {
+    left: 0;
+    bottom: -10px;
+  }
+
+  .badge-top-right {
+    right: 0;
+    top: -10px;
   }
 }

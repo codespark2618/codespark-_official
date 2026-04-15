@@ -2,19 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Homepage.css";
 import heroImg from "../assets/heroimg1.png";
-import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import SuccessStories from "../Components/SuccessStories";
 import CoursesSection from "../Components/CoursesSection";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Contact from "../Components/Contact";
 
-
 function Homepage() {
   return (
     <>
-      <Navbar />
-
       <div className="homepage">
         <section className="hero">
           <div className="hero-left">
@@ -38,13 +34,27 @@ function Homepage() {
 
           <div className="hero-right">
             <img src={heroImg} alt="hero" />
+
+            {/* Floating Badges */}
+            <Link to="/internship" className="floating-badge badge-top-left">
+  Paid Internship
+</Link>
+
+            <div className="floating-badge badge-bottom-left">
+              Real Projects
+            </div>
+
+            <div className="floating-badge badge-top-right">
+              Certification
+            </div>
           </div>
         </section>
+
         <WhyChooseUs />
         <CoursesSection />
         <SuccessStories />
         <Contact />
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

@@ -90,17 +90,17 @@ function Contact() {
 
         <div className="contact-info">
           <div className="info-item">
-            <div className="icon">📞</div>
+            {/* <div className="icon">📞</div> */}
             <div>
-              <h4>Have any questions</h4>
+              <h4> 📞  Have any questions </h4>
               <p>+91 90253 53470</p>
             </div>
           </div>
 
           <div className="info-item">
-            <div className="icon">✉️</div>
+            {/* <div className="icon">✉️</div> */}
             <div>
-              <h4>Write mail</h4>
+              <h4>  ✉️  Write mail </h4>
               <p>codespark2618@gmail.com</p>
             </div>
           </div>

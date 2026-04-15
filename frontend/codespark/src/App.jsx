@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 import Homepage from "./Pages/Homepage";
 import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetails";
@@ -13,6 +14,7 @@ import Career from "./Pages/Career";
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/courses" element={<Courses />} />

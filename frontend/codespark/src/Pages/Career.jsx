@@ -6,6 +6,7 @@ function Career() {
   return (
     <section className="career-page">
       <div className="career-container">
+
         {/* LEFT */}
         <div className="career-left">
           <h1 className="career-title">
@@ -20,27 +21,27 @@ function Career() {
           </p>
 
           <div className="career-buttons">
-            <button className="career-btn career-btn-primary">
-              View Open Roles <span>→</span>
+            <button className="career-btn primary">
+              View Open Roles →
             </button>
 
-            <button className="career-btn career-btn-outline">
+            <button className="career-btn outline">
               General Application
             </button>
           </div>
 
           <div className="career-stats">
-            <div className="career-stat">
+            <div>
               <h2>10+</h2>
               <p>Team Members</p>
             </div>
 
-            <div className="career-stat">
+            <div>
               <h2>1+</h2>
               <p>Years Running</p>
             </div>
 
-            <div className="career-stat">
+            <div>
               <h2>20+</h2>
               <p>Students Impacted</p>
             </div>
@@ -49,13 +50,14 @@ function Career() {
 
         {/* RIGHT */}
         <div className="career-right">
-          <img src={careerImg} alt="Career Team" className="career-image" />
+          <img src={careerImg} alt="Career Team" />
 
           <div className="career-badge">
-            <div className="career-badge-icon">⌂</div>
-            <span>Great Place to Work</span>
+            <span className="badge-icon">🏆</span>
+            Great Place to Work
           </div>
         </div>
+
       </div>
     </section>
   );

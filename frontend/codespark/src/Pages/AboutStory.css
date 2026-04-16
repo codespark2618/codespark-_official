@@ -1,9 +1,126 @@
 .about-story-section {
   width: 100%;
   background: #f3f3f3;
-  padding: 40px 0 70px;
+  padding: 100px 0 70px; /* FIX FOR TOP HIDE */
   font-family: "Poppins", sans-serif;
   overflow: hidden;
+}
+
+/* =========================
+   ABOUT STORY SECTION
+========================= */
+.about-story-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 0 40px;
+  margin-bottom: 100px;
+}
+
+/* LEFT IMAGE */
+.about-story-left {
+  flex: 1;
+}
+
+.about-story-image {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+}
+
+/* RIGHT CONTENT */
+.about-story-right {
+  flex: 1;
+}
+
+/* BADGE */
+.story-badge {
+  display: inline-block;
+  border: 2px solid #f28c1b;
+  padding: 8px 22px;
+  border-radius: 30px;
+  color: #f28c1b;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.story-title {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.story-title span {
+  color: #f28c1b;
+  font-style: italic;
+}
+
+/* DESCRIPTION */
+.story-description {
+  font-size: 19px;
+  color: #6f7780;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 90%;
+}
+
+/* DIVIDER */
+.story-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0 28px;
+}
+
+/* BLOCK */
+.story-item {
+  margin-bottom: 30px;
+}
+
+/* ICON + HEADING */
+.story-item-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* ICON BOX */
+.story-icon-box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #f28c1b;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON */
+.story-icon {
+  font-size: 28px;
+  color: #f28c1b;
+}
+
+/* HEADING */
+.story-item h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* TEXT */
+.story-item p {
+  font-size: 17px;
+  color: #6f7780;
+  line-height: 1.6;
+  margin-left: 75px;
+  max-width: 95%;
 }
 
 /* =========================
@@ -11,7 +128,7 @@
 ========================= */
 .journey-section {
   max-width: 1300px;
-  margin: 0 auto 90px;
+  margin: 0 auto;
   padding: 0 40px;
   text-align: center;
 }
@@ -32,7 +149,7 @@
   font-weight: 700;
   line-height: 1.2;
   color: #000;
-  margin: 0 0 18px;
+  margin-bottom: 18px;
 }
 
 .journey-title span {
@@ -43,9 +160,10 @@
   font-size: 19px;
   color: #767676;
   line-height: 1.8;
-  margin: 0 auto 70px;
+  margin-bottom: 70px;
 }
 
+/* GRID */
 .journey-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -73,6 +191,7 @@
   display: none;
 }
 
+/* ICON BOX */
 .journey-icon-box {
   width: 96px;
   height: 96px;
@@ -86,6 +205,7 @@
   z-index: 1;
 }
 
+/* STEP */
 .journey-step {
   display: inline-block;
   padding: 6px 14px;
@@ -99,7 +219,7 @@
   font-size: 22px;
   font-weight: 700;
   color: #1c1c1c;
-  margin: 0 0 12px;
+  margin-bottom: 12px;
 }
 
 .journey-card p {
@@ -109,6 +229,8 @@
   margin: 0;
   padding: 0 8px;
 }
+
+/* COLORS */
 
 /* BLUE */
 .journey-icon-box.blue {
@@ -163,282 +285,9 @@
 }
 
 /* =========================
-   ABOUT STORY SECTION
+   RESPONSIVE
 ========================= */
-.about-story-container {
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  align-items: flex-start;
-  gap: 60px;
-  padding: 0 40px;
-}
 
-/* LEFT IMAGE */
-.about-story-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.about-story-image {
-  width: 100%;
-  max-width: 520px;
-  display: block;
-}
-
-/* DEMO BUTTON */
-.demo-class-btn {
-  margin-top: 24px;
-  min-width: 190px;
-  height: 52px;
-  border: none;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #f28c1b, #ffb347);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  padding: 0 26px;
-  cursor: pointer;
-  box-shadow: 0 10px 22px rgba(242, 140, 27, 0.22);
-  transition: all 0.25s ease;
-}
-
-.demo-class-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(242, 140, 27, 0.28);
-}
-
-/* RIGHT CONTENT */
-.about-story-right {
-  flex: 1;
-}
-
-/* BADGE */
-.story-badge {
-  display: inline-block;
-  border: 2px solid #f28c1b;
-  padding: 8px 22px;
-  border-radius: 30px;
-  color: #f28c1b;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-/* TITLE */
-.story-title {
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #000;
-  margin-bottom: 18px;
-}
-
-.story-title span {
-  color: #f28c1b;
-  font-style: italic;
-}
-
-/* DESCRIPTION */
-.story-description {
-  font-size: 19px;
-  color: #6f7780;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  max-width: 90%;
-}
-
-/* LINE */
-.story-divider {
-  height: 1px;
-  background: #ddd;
-  margin: 20px 0 28px;
-}
-
-/* BLOCK */
-.story-item {
-  margin-bottom: 30px;
-}
-
-/* ICON + HEADING ROW */
-.story-item-top {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-/* ICON BOX */
-.story-icon-box {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #f28c1b;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ICON */
-.story-icon {
-  font-size: 28px;
-  color: #f28c1b;
-}
-
-/* HEADING */
-.story-item h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* PARAGRAPH */
-.story-item p {
-  font-size: 17px;
-  color: #6f7780;
-  line-height: 1.6;
-  margin-left: 75px;
-  max-width: 95%;
-}
-
-/* =========================
-   DEMO FORM MODAL
-========================= */
-.demo-form-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  z-index: 9999;
-}
-
-.demo-form-modal {
-  width: 100%;
-  max-width: 520px;
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 28px 24px 24px;
-  position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-  animation: popupFade 0.25s ease;
-}
-
-@keyframes popupFade {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.demo-form-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 38px;
-  height: 38px;
-  border: none;
-  background: #f4f4f4;
-  border-radius: 50%;
-  font-size: 16px;
-  color: #444;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.demo-form-close:hover {
-  background: #ececec;
-}
-
-.demo-form-header {
-  text-align: center;
-  margin-bottom: 22px;
-}
-
-.demo-form-header h2 {
-  margin: 0 0 8px;
-  font-size: 30px;
-  color: #111;
-  font-weight: 700;
-}
-
-.demo-form-header p {
-  margin: 0;
-  color: #7c7c7c;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.demo-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.demo-form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.demo-form-group label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
-}
-
-.demo-form-group input {
-  width: 100%;
-  height: 48px;
-  border: 1px solid #d8d8d8;
-  border-radius: 12px;
-  padding: 0 14px;
-  font-size: 14px;
-  color: #222;
-  outline: none;
-  transition: 0.2s ease;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.demo-form-group input:focus {
-  border-color: #f28c1b;
-  box-shadow: 0 0 0 3px rgba(242, 140, 27, 0.12);
-}
-
-.demo-submit-btn {
-  border: none;
-  outline: none;
-  background: linear-gradient(135deg, #f28c1b, #ffb347);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 14px 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: 0.25s ease;
-  font-family: "Poppins", sans-serif;
-}
-
-.demo-submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(242, 140, 27, 0.28);
-}
-
-/* RESPONSIVE */
 @media (max-width: 1100px) {
   .journey-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -460,10 +309,6 @@
     gap: 30px;
   }
 
-  .about-story-left {
-    width: 100%;
-  }
-
   .story-title {
     font-size: 34px;
   }
@@ -478,7 +323,7 @@
 
   .story-item p {
     font-size: 15px;
-    margin-left: 65px;
+    margin-left: 0;
   }
 
   .journey-title {
@@ -524,28 +369,5 @@
   .journey-card p {
     font-size: 15px;
     padding: 0;
-  }
-
-  .about-story-image {
-    max-width: 100%;
-  }
-
-  .demo-class-btn {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .story-item p {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .demo-form-modal {
-    padding: 24px 18px 20px;
-    border-radius: 18px;
-  }
-
-  .demo-form-header h2 {
-    font-size: 24px;
   }
 }

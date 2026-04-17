@@ -4,7 +4,7 @@ import "./Homepage.css";
 import heroImg from "../assets/heroimg1.png";
 import Footer from "../Components/Footer";
 import SuccessStories from "../Components/SuccessStories";
-import CoursesSection from "../Components/CoursesSection";
+import Courses from "../Pages/Courses";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Contact from "../Components/Contact";
 
@@ -51,7 +51,7 @@ function Homepage() {
         </section>
 
         <WhyChooseUs />
-        <CoursesSection />
+        <Courses />
         <SuccessStories />
         <Contact />
         <Footer />

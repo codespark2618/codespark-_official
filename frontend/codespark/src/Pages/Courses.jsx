@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Courses.css";
+import CourseDetails from "./CourseDetails";
 import Footer from "../Components/Footer";
 
 import {
@@ -261,8 +262,8 @@ function Courses() {
           </div>
         </div>
       )}
-
-      <Footer />
+{/* <CourseDetails /> */}
+      {/* <Footer /> */}
     </>
   );
 }

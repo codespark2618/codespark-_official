@@ -118,14 +118,27 @@
 
 /* BUTTON */
 .enroll-btn {
-  padding: 12px 20px;
-  border-radius: 12px;
-  border: none;
-  font-size: 15px;
-  background: linear-gradient(135deg, #4facfe, #6a5cff);
-  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid orange !important;
+  background: transparent !important;
+  color: orange !important;
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+/* Hover = full orange */
+
+.enroll-btn:hover {
+  background: orange !important;
+  border-color: orange !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

@@ -47,8 +47,10 @@ function CourseDetails() {
           <span className="topics">12 Topics</span>
         </div>
 
-        {/* Button */}
-        <button className="enroll-btn">Enroll Now →</button>
+        {/* Bootstrap Style Button */}
+        <button className="btn btn-outline-warning enroll-btn">
+          Enroll Now →
+        </button>
 
       </div>
     </div>

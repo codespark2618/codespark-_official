@@ -4,7 +4,7 @@ import "./Homepage.css";
 import heroImg from "../assets/heroimg1.png";
 import Footer from "../Components/Footer";
 import SuccessStories from "../Components/SuccessStories";
-import Courses from "../Pages/Courses";
+import Courses from "../Components/Courses";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Contact from "../Components/Contact";
 

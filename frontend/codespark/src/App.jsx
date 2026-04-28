@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Homepage from "./Pages/Homepage";
-import Courses from "./Pages/Courses";
+import Courses from "./Components/Courses";
 import CourseDetails from "./Pages/CourseDetails";
 import Footer from "./Components/Footer"; 
 import Contact from "./Components/Contact";

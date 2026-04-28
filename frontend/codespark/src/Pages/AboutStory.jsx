@@ -2,6 +2,8 @@ import React from "react";
 import "./AboutStory.css";
 import storyImg from "../assets/about.png";
 import Footer from "../Components/Footer";
+import StudentJourney from "../Components/StudentJourney";
+
 import {
   FaBullseye,
   FaEye,
@@ -14,38 +16,38 @@ import {
 function AboutStory() {
 
   const journeySteps = [
-    {
-      step: "STEP 01",
-      title: "Learn Course",
-      description:
-        "Enroll in your chosen program and learn from industry-expert instructors with practical assignments",
-      icon: <FaBookOpen />,
-      theme: "blue",
-    },
-    {
-      step: "STEP 02",
-      title: "Build Projects",
-      description:
-        "Apply your knowledge by building real world projects that showcase your skills to employers.",
-      icon: <FaCode />,
-      theme: "orange",
-    },
-    {
-      step: "STEP 03",
-      title: "Internship",
-      description:
-        "Join our internship program, work with real teams, and gain the professional experience you need.",
-      icon: <FaBriefcase />,
-      theme: "green",
-    },
-    {
-      step: "STEP 04",
-      title: "Career Growth",
-      description:
-        "Launch your IT career with our placement support, resume building, and interview preparation.",
-      icon: <FaArrowUp />,
-      theme: "purple",
-    },
+    // {
+    //   step: "STEP 01",
+    //   title: "Learn Course",
+    //   description:
+    //     "Enroll in your chosen program and learn from industry-expert instructors with practical assignments",
+    //   icon: <FaBookOpen />,
+    //   theme: "blue",
+    // },
+    // {
+    //   step: "STEP 02",
+    //   title: "Build Projects",
+    //   description:
+    //     "Apply your knowledge by building real world projects that showcase your skills to employers.",
+    //   icon: <FaCode />,
+    //   theme: "orange",
+    // },
+    // {
+    //   step: "STEP 03",
+    //   title: "Internship",
+    //   description:
+    //     "Join our internship program, work with real teams, and gain the professional experience you need.",
+    //   icon: <FaBriefcase />,
+    //   theme: "green",
+    // },
+    // {
+    //   step: "STEP 04",
+    //   title: "Career Growth",
+    //   description:
+    //     "Launch your IT career with our placement support, resume building, and interview preparation.",
+    //   icon: <FaArrowUp />,
+    //   theme: "purple",
+    // },
   ];
 
   return (
@@ -109,7 +111,7 @@ function AboutStory() {
         </div>
 
         {/* JOURNEY SECOND */}
-        <div className="journey-section">
+        {/* <div className="journey-section">
           <div className="journey-badge">YOUR PATH TO SUCCESS</div>
 
           <h1 className="journey-title">
@@ -140,8 +142,8 @@ function AboutStory() {
               </div>
             ))}
           </div>
-        </div>
-
+        </div> */}
+         <StudentJourney />
       </section>
 
       <Footer />

@@ -1,57 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CourseDetails.css";
 
 function CourseDetails() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validate = () => {
+    let newErrors = {};
+
+    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.phone) newErrors.phone = "Phone number is required";
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      console.log("Form Submitted:", formData);
+      alert("Enrollment Successful 🚀");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        course: "",
+      });
+      setErrors({});
+    }
+  };
+
   return (
-    <div className="course-container">
-      <div className="content">
+    <div className="enroll-container">
+      <div className="form-box">
+        <h2>Enroll Now 🚀</h2>
 
-        {/* Header */}
-        <div className="header">
-          <div className="icon">🌐</div>
-          <h1>Web Development</h1>
-          <p>
-            Master HTML, CSS, JavaScript & modern frameworks to build stunning,
-            responsive websites from scratch.
-          </p>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
 
-        {/* Info Cards */}
-        <div className="info-cards">
-          <div className="card">
-            <span>⏱ Duration</span>
-            <h3>4 Months</h3>
-          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
 
-          <div className="card price">
-            <span>💰 Course Fee</span>
-            <h3>₹2,999</h3>
-          </div>
-        </div>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <p className="error">{errors.phone}</p>}
 
-        {/* Benefits */}
-        <div className="benefits">
-          <h3>WHAT YOU GET</h3>
+          <select
+            name="course"
+            value={formData.course}
+            onChange={handleChange}
+          >
+            <option value="">Select Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Python FullStack">Python FullSTack</option>
+            <option value="Java FullStack">Java FullStack</option>
+          </select>
 
-          <div className="benefit-grid">
-            <div className="benefit">🎓 Placement Assistance</div>
-            <div className="benefit">🎧 24x7 Support</div>
-            <div className="benefit">👨‍💻 Industry Experts</div>
-            <div className="benefit">📜 Certification</div>
-          </div>
-        </div>
-
-        {/* Syllabus */}
-        <div className="syllabus">
-          <h3>Course Syllabus</h3>
-          <span className="topics">12 Topics</span>
-        </div>
-
-        {/* Bootstrap Style Button */}
-        <button className="btn btn-outline-warning enroll-btn">
-          Enroll Now →
-        </button>
-
+          <button type="submit">Submit Enrollment</button>
+        </form>
       </div>
     </div>
   );

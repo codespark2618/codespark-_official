@@ -76,7 +76,26 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  gap: 10px; /* 👈 add pannadhu */
 }
+
+.course-footer button {
+  border: none;
+  background: #4f46e5;
+  color: white;
+  padding: 6px 10px; /* 👈 width kammi */
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px; /* 👈 konjam small */
+  width: auto; /* 👈 important */
+  white-space: nowrap; /* 👈 text wrap aagathu */
+  transition: 0.3s;
+}
+
+
 
 .course-footer span {
   font-size: 14px;
@@ -86,19 +105,6 @@
   gap: 5px;
 }
 
-/* BUTTON */
-.course-footer button {
-  border: none;
-  background: #4f46e5;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: 0.3s;
-}
 
 .course-footer button:hover {
   background: #3730a3;

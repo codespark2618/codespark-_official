@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Homepage.css";
 import heroImg from "../assets/heroimg1.png";
@@ -9,6 +9,30 @@ import WhyChooseUs from "../Components/WhyChooseUs";
 import Contact from "../Components/Contact";
 
 function Homepage() {
+  const [students, setStudents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Fetch student data from the Django backend API
+    fetch('/api/students/')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load students');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setStudents(data);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <div className="homepage">
@@ -48,6 +72,33 @@ function Homepage() {
               Certification
             </div>
           </div>
+        </section>
+
+        <section className="student-api-section">
+          <div className="student-api-header">
+            <h2>Student Records from Backend</h2>
+            <p>This section loads student data from the Django API at <code>/api/students/</code>.</p>
+          </div>
+
+          {loading ? (
+            <p>Loading student data...</p>
+          ) : error ? (
+            <p className="error">Error: {error}</p>
+          ) : (
+            <div className="student-list">
+              {students.length > 0 ? (
+                <ul>
+                  {students.map((student) => (
+                    <li key={student.id}>
+                      <strong>{student.name}</strong> - {student.email} - {student.course}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>No student records found.</p>
+              )}
+            </div>
+          )}
         </section>
 
         <WhyChooseUs />

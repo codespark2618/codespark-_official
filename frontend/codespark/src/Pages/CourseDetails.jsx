@@ -25,23 +25,52 @@ function CourseDetails() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      console.log("Form Submitted:", formData);
-      alert("Enrollment Successful 🚀");
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/enroll/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            course: formData.course,
+          }),
+        });
 
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        course: "",
-      });
-      setErrors({});
+        let result = null;
+        const text = await response.text();
+        try {
+          result = JSON.parse(text);
+        } catch (parseError) {
+          result = { error: text || 'Unexpected server response' };
+        }
+
+        if (response.ok) {
+          alert("Enrollment Successful! We will contact you soon. 🚀");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            course: "",
+          });
+          setErrors({});
+        } else {
+          console.error('Enroll error response:', result);
+          alert(`Error: ${result.error || 'Server returned an error'}`);
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Error submitting enrollment. Please try again.');
+      }
     }
   };
 
